@@ -24,8 +24,8 @@ select pgender ,count(pgender) from person GROUP BY pgender;
 select * from role;
 select mid,count(pid) from role GROUP BY mid;
 select * from movie, role where movie.mid = role.mid;
-select * from movie left join on movie.mid = role.mid;
-select * from movie right join on movie.mid = role.mid;
+select * from movie left join role on movie.mid = role.mid;
+select * from movie right join role on movie.mid = role.mid;
 
 SELECT pid  FROM person WHERE pname ='Cary Grant';
 SELECT mid  FROM role WHERE part = 'A' and pid = '2';
